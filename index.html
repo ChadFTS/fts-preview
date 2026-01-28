@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTS Calculator Nurture - Email Wireframes</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e; 
+            color: #eee;
+            padding: 40px 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { text-align: center; margin-bottom: 40px; color: #F8BF29; }
+        
+        .email-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+        
+        .email-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .email-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+        }
+        
+        .email-header h2 { font-size: 14px; font-weight: 600; margin-bottom: 5px; opacity: 0.8; }
+        .email-header h3 { font-size: 16px; font-weight: 700; }
+        .email-header .timing { font-size: 12px; opacity: 0.7; margin-top: 5px; }
+        
+        .email-body {
+            padding: 25px;
+            color: #333;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        
+        .email-body p { margin-bottom: 16px; }
+        
+        .personalization {
+            background: #e8f4f8;
+            color: #0066cc;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 13px;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #F8BF29;
+            color: #030712;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .cta-button:hover { background: #e5ad1f; }
+        
+        .signature {
+            color: #666;
+            font-style: italic;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: 10px;
+        }
+        
+        .email-note {
+            background: #f0f9ff;
+            border-left: 4px solid #0066cc;
+            padding: 12px 15px;
+            margin: 15px 0;
+            font-size: 13px;
+            color: #0066cc;
+        }
+        
+        ul { margin: 15px 0 15px 25px; }
+        li { margin-bottom: 8px; }
+        
+        .arrow { margin-left: 5px; }
+        
+        .section-divider {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📧 FTS Calculator Nurture Sequence - Email Wireframes</h1>
+        
+        <div class="email-grid">
+            
+            <!-- EMAIL 1 -->
+            <div class="email-card">
+                <div class="email-header">
+                    <h2>EMAIL 1 — Immediate</h2>
+                    <h3>Subject: You're leaving 99% of your audience on the table</h3>
+                    <div class="timing">⏱️ Sends immediately after signup</div>
+                </div>
+                <div class="email-body">
+                    <p>You just ran the numbers.</p>
+                    
+                    <p>Right now you're posting <span class="personalization">{{posting_frequency}}</span> times/month and getting about <span class="personalization">{{current_reach}}</span> views.</p>
+                    
+                    <p>FTS clients? <span class="highlight">540,000 views/month</span> on average.</p>
+                    
+                    <p>That's not a gap — it's a canyon.</p>
+                    
+                    <p>Here's the thing: you're already creating content. The problem isn't effort. It's distribution.</p>
+                    
+                    <p>One hour of your time → we turn it into 60-120 posts across 6 platforms.</p>
+                    
+                    <p>Want to see what that would actually look like for your business?</p>
+                    
+                    <a href="#" class="cta-button">Book Your 15-Min Strategy Call <span class="arrow">→</span></a>
+                    
+                    <p class="signature">Cheers,<br>Chad FTS</p>
+                </div>
+            </div>
+            
+            <!-- EMAIL 2 -->
+            <div class="email-card">
+                <div class="email-header">
+                    <h2>EMAIL 2 — Day 1</h2>
+                    <h3>Subject: How April went from invisible to 400,000 views</h3>
+                    <div class="timing">⏱️ 1 day after signup</div>
+                </div>
+                <div class="email-body">
+                    <p>April Davis runs LUMA Luxury Matchmaking.</p>
+                    
+                    <p>She was posting occasionally. Getting a few hundred views. The usual.</p>
+                    
+                    <p><strong>120 days later?</strong></p>
+                    <ul>
+                        <li>→ 400,000 views</li>
+                        <li>→ 15,000 new followers</li>
+                        <li>→ Clients finding her through content she didn't even remember posting</li>
+                    </ul>
+                    
+                    <p>The difference wasn't working harder. It was showing up everywhere, every day, with content that actually hit.</p>
+                    
+                    <p>We do 1 interview/month with April. 60 minutes.</p>
+                    
+                    <p>We turn it into 60-120 posts. She doesn't touch any of it.</p>
+                    
+                    <a href="#" class="cta-button">See How It Works <span class="arrow">→</span></a>
+                    
+                    <p class="signature">— Chad</p>
+                    
+                    <p style="font-size: 13px; color: #666;">P.S. More case studies here if you're curious: <a href="#">ftspod.com/case-studies</a></p>
+                </div>
+            </div>
+            
+            <!-- EMAIL 3 -->
+            <div class="email-card">
+                <div class="email-header">
+                    <h2>EMAIL 3 — Day 3</h2>
+                    <h3>Subject: Want me to build this out for you?</h3>
+                    <div class="timing">⏱️ 2 days after Email 2</div>
+                </div>
+                <div class="email-body">
+                    <p>I've been thinking about your calculator results.</p>
+                    
+                    <p>Would it help if I put together a quick doc showing exactly how we'd package your expertise into viral content?</p>
+                    
+                    <p><strong>No strings. Just a 1-pager with:</strong></p>
+                    <ul>
+                        <li>Topic ideas specific to your industry</li>
+                        <li>Which platforms would hit hardest for you</li>
+                        <li>What 60-120 posts/month would actually look like</li>
+                    </ul>
+                    
+                    <p>If you want it, just reply <span class="highlight">"send it"</span> and I'll put something together.</p>
+                    
+                    <p class="signature">— Chad</p>
+                    
+                    <div class="email-note">
+                        💡 <strong>Note:</strong> This email uses a soft CTA (reply) instead of a button. Keep it as-is for variety.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- EMAIL 4 -->
+            <div class="email-card">
+                <div class="email-header">
+                    <h2>EMAIL 4 — Day 6</h2>
+                    <h3>Subject: 70 million views later...</h3>
+                    <div class="timing">⏱️ 3 days after Email 3</div>
+                </div>
+                <div class="email-body">
+                    <p><strong>Some numbers from the last 12 months:</strong></p>
+                    
+                    <ul>
+                        <li>→ 70M+ total views generated</li>
+                        <li>→ 5M+ followers added</li>
+                        <li>→ 100+ CEOs and founders</li>
+                    </ul>
+                    
+                    <p>Not influencers. Business owners.</p>
+                    
+                    <p>People who don't have time to post every day. Who tried hiring a social media person and it didn't work. Who know they should be doing this but can't figure out how.</p>
+                    
+                    <p>Sound familiar?</p>
+                    
+                    <a href="#" class="cta-button">15 Min — Let Me Show You <span class="arrow">→</span></a>
+                    
+                    <p class="signature">— Chad</p>
+                </div>
+            </div>
+            
+            <!-- EMAIL 5 -->
+            <div class="email-card">
+                <div class="email-header" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <h2>EMAIL 5 — Day 12</h2>
+                    <h3>Subject: Still leaving views on the table?</h3>
+                    <div class="timing">⏱️ 6 days after Email 4 (final email)</div>
+                </div>
+                <div class="email-body">
+                    <p>Two weeks ago you found out you're capturing less than 1% of your potential audience.</p>
+                    
+                    <p>Has anything changed?</p>
+                    
+                    <p>If not, I'd love to help.</p>
+                    
+                    <p>If it's not a fit, no worries — just reply "stop" and I'll leave you alone forever.</p>
+                    
+                    <p>But if you're still curious:</p>
+                    
+                    <a href="#" class="cta-button">Let's Talk <span class="arrow">→</span></a>
+                    
+                    <p class="signature">— Chad</p>
+                    
+                    <div class="email-note">
+                        🔥 <strong>Last chance email.</strong> Short, direct, respectful opt-out. High intent readers only.
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="section-divider">
+            <p>━━━━━━━━━━━━━━━━━━━━━━━━</p>
+            <p style="margin-top: 15px;"><strong>Button CTA Summary:</strong></p>
+            <p style="margin-top: 10px; font-size: 13px;">
+                Email 1: "Book Your 15-Min Strategy Call →"<br>
+                Email 2: "See How It Works →"<br>
+                Email 3: (Reply CTA - no button)<br>
+                Email 4: "15 Min — Let Me Show You →"<br>
+                Email 5: "Let's Talk →"
+            </p>
+            <p style="margin-top: 20px; font-size: 12px; color: #666;">
+                All buttons link to: https://calendly.com/chad-fts/videxpert
+            </p>
+        </div>
+        
+    </div>
+</body>
+</html>
