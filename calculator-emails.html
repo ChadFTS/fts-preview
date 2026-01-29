@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Email Sequence Preview</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 { font-size: 28px; margin-bottom: 8px; }
+        .header p { opacity: 0.9; }
+        .nav {
+            background: #0f172a;
+            padding: 16px 20px;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #334155;
+        }
+        .nav-btn {
+            padding: 10px 20px;
+            background: #334155;
+            border: none;
+            border-radius: 8px;
+            color: #e2e8f0;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .nav-btn:hover { background: #475569; }
+        .nav-btn.active { background: #6366f1; color: white; }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .email { display: none; }
+        .email.active { display: block; }
+        .email-meta {
+            background: #334155;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+        .email-meta-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        .email-meta-label { color: #94a3b8; width: 80px; flex-shrink: 0; }
+        .email-meta-value { color: #f8fafc; font-weight: 500; }
+        .email-content {
+            background: #ffffff;
+            color: #1a1a2e;
+            border-radius: 12px;
+            padding: 32px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        .email-content p { margin-bottom: 16px; }
+        .email-content strong { color: #1a1a2e; }
+        .email-content a { color: #6366f1; text-decoration: none; font-weight: 500; }
+        .email-content a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📊 Calculator Email Sequence</h1>
+        <p>5-Email Nurture Flow • Upgraded with HTML Styling</p>
+    </div>
+    
+    <div class="nav">
+        <button class="nav-btn active" onclick="showEmail(1)">Email 1</button>
+        <button class="nav-btn" onclick="showEmail(2)">Email 2</button>
+        <button class="nav-btn" onclick="showEmail(3)">Email 3</button>
+        <button class="nav-btn" onclick="showEmail(4)">Email 4</button>
+        <button class="nav-btn" onclick="showEmail(5)">Email 5</button>
+    </div>
+    
+    <div class="container">
+        <!-- EMAIL 1 -->
+        <div class="email active" id="email-1">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">You're leaving views on the table</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">Here's how to close the gap.</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Send:</span>
+                    <span class="email-meta-value">Immediately</span>
+                </div>
+            </div>
+            
+            <div class="email-content">
+                <p>You just ran the numbers.</p>
+                
+                <p>Right now you're reaching about <strong>{{current_reach}} views/month</strong>.</p>
+                
+                <p>FTS clients? <strong>540,000</strong>.</p>
+                
+                <div style="background: #f8fafc; border-left: 4px solid #6366f1; padding: 16px; margin: 16px 0; border-radius: 0 8px 8px 0;">
+                    <p style="color: #64748b; margin-bottom: 8px;">Your reach:</p>
+                    <p style="font-size: 24px; font-weight: 700; color: #dc2626; margin-bottom: 12px;">{{current_reach}}/month</p>
+                    <p style="color: #64748b; margin-bottom: 8px;">FTS client average:</p>
+                    <p style="font-size: 24px; font-weight: 700; color: #16a34a; margin: 0;">540,000/month</p>
+                </div>
+                
+                <p>That's not a gap — it's a canyon.</p>
+                
+                <p>Here's the thing: <strong>you're already creating content.</strong> The problem isn't effort. It's distribution.</p>
+                
+                <p>One hour of your time → we turn it into 60-120 posts across 6 platforms.</p>
+                
+                <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); border-radius: 12px; padding: 24px; text-align: center; margin: 24px 0;">
+                    <p style="color: white; font-weight: 600; margin-bottom: 12px;">Want to see what that would look like for your business?</p>
+                    <a href="https://calendly.com/chad-fts/videxpert" style="display: inline-block; background: #fbbf24; color: #1a1a2e; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none;">Book 15 Minutes With Me</a>
+                </div>
+                
+                <p>— Chad</p>
+            </div>
+        </div>
+        
+        <!-- EMAIL 2 -->
+        <div class="email" id="email-2">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">How April went from invisible to 400,000 views</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">120 days. Same effort. Wildly different results.</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Send:</span>
+                    <span class="email-meta-value">Day 2</span>
+                </div>
+            </div>
+            
+            <div class="email-content">
+                <p>Quick story:</p>
+                
+                <p><strong>April Davis</strong> runs LUMA Luxury Matchmaking.</p>
+                
+                <p>She was posting occasionally. Getting a few hundred views. The usual.</p>
+                
+                <p>120 days later?</p>
+                
+                <div style="background: #f0fdf4; border-radius: 8px; padding: 20px; margin: 16px 0;">
+                    <p style="color: #166534; margin-bottom: 8px; font-size: 18px;">→ <strong>400,000 views</strong></p>
+                    <p style="color: #166534; margin-bottom: 8px; font-size: 18px;">→ <strong>15,000 new followers</strong></p>
+                    <p style="color: #166534; font-size: 18px; margin: 0;">→ <strong>Clients finding her through content</strong> she didn't even remember posting</p>
+                </div>
+                
+                <p>The difference wasn't working harder. It was showing up everywhere, every day, with content that actually hit.</p>
+                
+                <div style="background: #f8fafc; border-left: 4px solid #d4a853; padding: 16px; margin: 16px 0; border-radius: 0 8px 8px 0;">
+                    <p style="margin: 0; color: #1a1a2e;">We do <strong>1 interview/month</strong> with April. 60 minutes.<br><br>We turn it into <strong>60-120 posts</strong>. She doesn't touch any of it.</p>
+                </div>
+                
+                <p>If that sounds interesting:</p>
+                
+                <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); border-radius: 12px; padding: 24px; text-align: center; margin: 24px 0;">
+                    <a href="https://calendly.com/chad-fts/videxpert" style="display: inline-block; background: #fbbf24; color: #1a1a2e; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none;">Book a Strategy Call</a>
+                </div>
+                
+                <p>— Chad</p>
+                
+                <div style="background: #fef3c7; padding: 16px; border-radius: 8px; margin-top: 24px; font-size: 14px; color: #92400e;">
+                    <strong>P.S.</strong> More case studies here if you're curious: <a href="https://www.ftspod.com/case-studies" style="color: #6366f1;">ftspod.com/case-studies</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- EMAIL 3 -->
+        <div class="email" id="email-3">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">Want me to build this out for you?</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">A custom 1-pager, no strings attached.</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Send:</span>
+                    <span class="email-meta-value">Day 5</span>
+                </div>
+            </div>
+            
+            <div class="email-content">
+                <p>Hey,</p>
+                
+                <p>I've been thinking about your calculator results.</p>
+                
+                <p>Would it help if I put together a quick doc showing exactly how we'd package your expertise into viral content?</p>
+                
+                <p><strong>No strings.</strong> Just a 1-pager with:</p>
+                
+                <div style="background: #f8fafc; border-radius: 8px; padding: 20px; margin: 16px 0; border: 1px solid #e2e8f0;">
+                    <p style="margin-bottom: 12px;">📝 <strong>Topic ideas</strong> specific to your industry</p>
+                    <p style="margin-bottom: 12px;">🎯 <strong>Which platforms</strong> would hit hardest for you</p>
+                    <p style="margin: 0;">📊 <strong>What 60-120 posts/month</strong> would actually look like</p>
+                </div>
+                
+                <p>If you want it, just reply <strong>"send it"</strong> and I'll put something together.</p>
+                
+                <p>— Chad</p>
+            </div>
+        </div>
+        
+        <!-- EMAIL 4 -->
+        <div class="email" id="email-4">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">70 million views later...</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">Some numbers from the last 12 months.</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Send:</span>
+                    <span class="email-meta-value">Day 8</span>
+                </div>
+            </div>
+            
+            <div class="email-content">
+                <p>Some numbers from the last 12 months:</p>
+                
+                <div style="background: linear-gradient(135deg, #1a1a2e 0%, #2d2d4a 100%); border-radius: 12px; padding: 24px; margin: 20px 0; text-align: center;">
+                    <div style="display: inline-block; margin: 0 20px 16px;">
+                        <p style="font-size: 32px; font-weight: 800; color: #fbbf24; margin-bottom: 4px;">70M+</p>
+                        <p style="font-size: 12px; color: #94a3b8; margin: 0;">Total Views</p>
+                    </div>
+                    <div style="display: inline-block; margin: 0 20px 16px;">
+                        <p style="font-size: 32px; font-weight: 800; color: #fbbf24; margin-bottom: 4px;">5M+</p>
+                        <p style="font-size: 12px; color: #94a3b8; margin: 0;">Followers Added</p>
+                    </div>
+                    <div style="display: inline-block; margin: 0 20px 16px;">
+                        <p style="font-size: 32px; font-weight: 800; color: #fbbf24; margin-bottom: 4px;">100+</p>
+                        <p style="font-size: 12px; color: #94a3b8; margin: 0;">CEOs Served</p>
+                    </div>
+                </div>
+                
+                <p>Not influencers. <strong>Business owners.</strong></p>
+                
+                <p>People who don't have time to post every day. Who tried hiring a social media person and it didn't work. Who know they should be doing this but can't figure out how.</p>
+                
+                <p><strong>Sound familiar?</strong></p>
+                
+                <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); border-radius: 12px; padding: 24px; text-align: center; margin: 24px 0;">
+                    <p style="color: white; margin-bottom: 12px;">15 minutes. I'll show you how it works.</p>
+                    <a href="https://calendly.com/chad-fts/videxpert" style="display: inline-block; background: #fbbf24; color: #1a1a2e; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none;">Book a Strategy Call</a>
+                </div>
+                
+                <p>— Chad</p>
+            </div>
+        </div>
+        
+        <!-- EMAIL 5 -->
+        <div class="email" id="email-5">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">Still leaving views on the table?</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">Two weeks ago you found out. Has anything changed?</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Send:</span>
+                    <span class="email-meta-value">Day 14</span>
+                </div>
+            </div>
+            
+            <div class="email-content">
+                <p>Hey,</p>
+                
+                <p>Two weeks ago you found out you're capturing less than 1% of your potential audience.</p>
+                
+                <p><strong>Has anything changed?</strong></p>
+                
+                <p>If not, I'd love to help.</p>
+                
+                <div style="background: #f8fafc; border-left: 4px solid #6366f1; padding: 16px; margin: 16px 0; border-radius: 0 8px 8px 0;">
+                    <p style="margin: 0; color: #64748b;">If it's not a fit, no worries — just reply <strong>"stop"</strong> and I'll leave you alone forever.</p>
+                </div>
+                
+                <p>But if you're still curious:</p>
+                
+                <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); border-radius: 12px; padding: 24px; text-align: center; margin: 24px 0;">
+                    <a href="https://calendly.com/chad-fts/videxpert" style="display: inline-block; background: #fbbf24; color: #1a1a2e; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none;">Let's Talk</a>
+                </div>
+                
+                <p>— Chad</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showEmail(num) {
+            document.querySelectorAll('.email').forEach(el => el.classList.remove('active'));
+            document.getElementById('email-' + num).classList.add('active');
+            document.querySelectorAll('.nav-btn').forEach((btn, i) => {
+                btn.classList.toggle('active', i === num - 1);
+            });
+        }
+    </script>
+</body>
+</html>
