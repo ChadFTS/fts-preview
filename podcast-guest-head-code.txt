@@ -184,6 +184,13 @@
             margin-bottom: 50px;
             color: #1e293b;
         }
+        
+        .social-proof h2 .accent {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
         .results-grid {
             display: grid;
@@ -247,13 +254,13 @@
 
         .benefits-section {
             padding: 80px 20px;
-            background: white;
+            background: #ffffff;
         }
 
         .benefits-section .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 60px;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
             color: #1e293b;
             font-weight: 800;
         }
@@ -263,6 +270,16 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+
+        .benefits-section .section-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #64748b;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .benefits-grid {
