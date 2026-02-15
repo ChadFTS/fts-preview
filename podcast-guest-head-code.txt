@@ -223,19 +223,26 @@
 
         .result-card .card-content {
             padding: 20px;
+            text-align: left;
         }
 
         .result-card .card-content h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #1e293b;
-            margin: 0 0 4px 0;
+            font-size: 1.1rem !important;
+            font-weight: 600 !important;
+            color: #1e293b !important;
+            margin: 0 0 4px 0 !important;
+            padding: 0 !important;
+            line-height: 1.3 !important;
+            text-transform: none !important;
+            letter-spacing: normal !important;
         }
 
         .result-card .card-content p {
-            font-size: 0.9rem;
-            color: #64748b;
-            margin: 0;
+            font-size: 0.9rem !important;
+            color: #64748b !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            line-height: 1.4 !important;
         }
 
         .benefits-section {
