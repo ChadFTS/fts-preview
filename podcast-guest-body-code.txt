@@ -60,42 +60,40 @@
     </div>
 </section>
 
-<section class="process-section">
+<section class="benefits-section">
     <div class="container">
-        <h2 class="section-title">How It Works</h2>
-        <p class="section-subtitle">From application to episode in 4 simple steps</p>
+        <h2 class="section-title">Why Be a <span class="accent">Guest?</span></h2>
         
-        <div class="process-steps">
-            <div class="step">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                    <h3>Apply (2 min)</h3>
-                    <p>Fill out the form below. We read every single one.</p>
-                </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">🎯</div>
+                <h3>Instant Credibility</h3>
+                <p>One episode puts you in front of 3M+ listeners. YouTube. Spotify. Apple. Our newsletter. Everywhere.</p>
             </div>
-
-            <div class="step">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <h3>We Reach Out</h3>
-                    <p>Good fit? You'll hear from us within a week to schedule.</p>
-                </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📈</div>
+                <h3>The Right Audience</h3>
+                <p>Founders. Investors. Decision-makers. The people who actually move deals forward.</p>
             </div>
-
-            <div class="step">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <h3>30-Minute Call</h3>
-                    <p>Remote video chat. We ask the questions. You tell your story. Easy.</p>
-                </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🎬</div>
+                <h3>Clips You Keep</h3>
+                <p>Walk away with ready-to-post clips for your LinkedIn, website, and pitch decks. Free content, forever.</p>
             </div>
-
-            <div class="step">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                    <h3>Go Live Everywhere</h3>
-                    <p>We edit, publish, and distribute. You get the clips. Your story reaches millions.</p>
-                </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🤝</div>
+                <h3>Open Doors</h3>
+                <p>Past guests have landed partnerships, investors, and customers directly from their episode.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">⭐</div>
+                <h3>We Do the Work</h3>
+                <p>Show up. Talk. Leave. We handle recording, editing, production, and distribution. Zero effort on your end.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🔗</div>
+                <h3>Permanent Visibility</h3>
+                <p>Your episode lives on ftspod.com forever. Backlinks. SEO juice. Discoverability that compounds.</p>
             </div>
         </div>
     </div>
