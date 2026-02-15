@@ -1,0 +1,182 @@
+<section class="social-proof">
+    <div class="container">
+        <h2>Featured Episodes</h2>
+        <div class="results-grid">
+            <div class="result-card">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/DHqRsHUGkmk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="category">Failing to Success Podcast</div>
+                    <div class="title">CEO of BeatBox Beverages Builds $100 Million Party Punch Brand</div>
+                    <div class="stats">
+                        <div class="stat-item-small">
+                            <div class="stat-value">$100M</div>
+                            <div class="stat-label-small">Revenue</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="result-card">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/SCYR0R62W6M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="category">Failing to Success Podcast</div>
+                    <div class="title">CEO of StoreBound Scales to $1 Billion in Kitchen Appliances</div>
+                    <div class="stats">
+                        <div class="stat-item-small">
+                            <div class="stat-value">$1B</div>
+                            <div class="stat-label-small">Revenue</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="result-card">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/ZX5wMP8n1Uw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="category">Failing to Success Podcast</div>
+                    <div class="title">CEO of Malk Organics Builds $100 Million Almond Milk Brand</div>
+                    <div class="stats">
+                        <div class="stat-item-small">
+                            <div class="stat-value">$100M</div>
+                            <div class="stat-label-small">Revenue</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="result-card">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/grUb2_6EERQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="category">Failing to Success Podcast</div>
+                    <div class="title">President of Lamborghini Sarasota on Crafting $10 Billion Premium Brands</div>
+                    <div class="stats">
+                        <div class="stat-item-small">
+                            <div class="stat-value">$10B</div>
+                            <div class="stat-label-small">Brand Value</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="result-card">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/0SwgtE1Zg4A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="category">Failing to Success Podcast</div>
+                    <div class="title">CEO of Syniti Scales to $220 Million in Data Management</div>
+                    <div class="stats">
+                        <div class="stat-item-small">
+                            <div class="stat-value">$220M</div>
+                            <div class="stat-label-small">Revenue</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="result-card">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/xxby-6YOW2A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="category">Failing to Success Podcast</div>
+                    <div class="title">CEO of Flippa Reaches $1 Billion in Digital Asset Transactions</div>
+                    <div class="stats">
+                        <div class="stat-item-small">
+                            <div class="stat-value">$1B</div>
+                            <div class="stat-label-small">Transactions</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="process-section">
+    <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">From application to episode in 4 simple steps</p>
+        
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Apply (2 min)</h3>
+                    <p>Fill out the form below. We read every single one.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>We Reach Out</h3>
+                    <p>Good fit? You'll hear from us within a week to schedule.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>30-Minute Call</h3>
+                    <p>Remote video chat. We ask the questions. You tell your story. Easy.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Go Live Everywhere</h3>
+                    <p>We edit, publish, and distribute. You get the clips. Your story reaches millions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="container">
+        <h2 class="section-title">What Our Clients Say</h2>
+        
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p class="testimonial-text">"The FTS team makes it incredibly easy to create great videos and communicate the right message. We already had a client come through our website because they found our YouTube videos, and I know it's only going to keep happening."</p>
+                <div class="testimonial-author">
+                    <img src="https://cdn.prod.website-files.com/668d36e688fcde32d118da03/695abb7167113b36c874d992_1716124867607.jpg" alt="Mike Singletary" class="author-avatar">
+                    <div class="author-info">
+                        <strong>Mike Singletary</strong>
+                        <span>CEO, Zindo</span>
+                        <div class="author-stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <p class="testimonial-text">"FTS has been a lifesaver in streamlining my content creation. With limited time due to my executive duties and book writing, Chad and the team handle everything from interviews to production and posting."</p>
+                <div class="testimonial-author">
+                    <img src="https://cdn.prod.website-files.com/668d36e688fcde32d118da03/6795444a650ea7503ddf2b67_Martin%20Rowinski.png" alt="Martin Rowinski" class="author-avatar">
+                    <div class="author-info">
+                        <strong>Martin Rowinski</strong>
+                        <span>Founder, Boardsi</span>
+                        <div class="author-stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <p class="testimonial-text">"FTS has been amazing in helping me get my message out. In just 120 days, we gained 400,000 views and 15,000 followers. I truly appreciate their thoroughness and the support they've given me."</p>
+                <div class="testimonial-author">
+                    <img src="https://cdn.prod.website-files.com/668d36e688fcde32d118da03/68253fed5a2edd911dfec5d6_image.png" alt="April Davis" class="author-avatar">
+                    <div class="author-info">
+                        <strong>April Davis</strong>
+                        <span>Founder, LUMA Luxury Matchmaking</span>
+                        <div class="author-stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
