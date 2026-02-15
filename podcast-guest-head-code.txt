@@ -222,57 +222,20 @@
         }
 
         .result-card .card-content {
-            padding: 24px;
+            padding: 20px;
         }
 
-        .result-card .category {
-            color: #6366f1;
-            font-size: 0.85rem;
+        .result-card .card-content h3 {
+            font-size: 1.1rem;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
-
-        .result-card .title {
-            font-weight: 700;
-            font-size: 1.25rem;
             color: #1e293b;
-            margin-bottom: 16px;
-            line-height: 1.4;
-            display: block;
+            margin: 0 0 4px 0;
         }
 
-        .result-card .stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            padding-top: 16px;
-            border-top: 1px solid #e2e8f0;
-        }
-
-        .result-card .stat-item-small {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 16px;
-            border: 2px solid #e0e7ff;
-            border-radius: 12px;
-            background: #f8faff;
-        }
-
-        .result-card .stat-value {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: #6366f1;
-            line-height: 1;
-        }
-
-        .result-card .stat-label-small {
-            font-size: 0.8rem;
+        .result-card .card-content p {
+            font-size: 0.9rem;
             color: #64748b;
-            margin-top: 4px;
+            margin: 0;
         }
 
         .benefits-section {
