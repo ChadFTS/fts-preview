@@ -7,14 +7,8 @@
                     <iframe src="https://www.youtube.com/embed/DHqRsHUGkmk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="card-content">
-                    <div class="category">Failing to Success Podcast</div>
-                    <div class="title">CEO of BeatBox Beverages Builds $100 Million Party Punch Brand</div>
-                    <div class="stats">
-                        <div class="stat-item-small">
-                            <div class="stat-value">$100M</div>
-                            <div class="stat-label-small">Revenue</div>
-                        </div>
-                    </div>
+                    <h3>Justin Fenchel</h3>
+                    <p>CEO, BeatBox Beverages</p>
                 </div>
             </div>
             <div class="result-card">
@@ -22,14 +16,8 @@
                     <iframe src="https://www.youtube.com/embed/SCYR0R62W6M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="card-content">
-                    <div class="category">Failing to Success Podcast</div>
-                    <div class="title">CEO of StoreBound Scales to $1 Billion in Kitchen Appliances</div>
-                    <div class="stats">
-                        <div class="stat-item-small">
-                            <div class="stat-value">$1B</div>
-                            <div class="stat-label-small">Revenue</div>
-                        </div>
-                    </div>
+                    <h3>Evan Dash</h3>
+                    <p>CEO, StoreBound</p>
                 </div>
             </div>
             <div class="result-card">
@@ -37,14 +25,8 @@
                     <iframe src="https://www.youtube.com/embed/ZX5wMP8n1Uw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="card-content">
-                    <div class="category">Failing to Success Podcast</div>
-                    <div class="title">CEO of Malk Organics Builds $100 Million Almond Milk Brand</div>
-                    <div class="stats">
-                        <div class="stat-item-small">
-                            <div class="stat-value">$100M</div>
-                            <div class="stat-label-small">Revenue</div>
-                        </div>
-                    </div>
+                    <h3>Jason Bronstad</h3>
+                    <p>CEO, Malk Organics</p>
                 </div>
             </div>
             <div class="result-card">
@@ -52,14 +34,8 @@
                     <iframe src="https://www.youtube.com/embed/grUb2_6EERQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="card-content">
-                    <div class="category">Failing to Success Podcast</div>
-                    <div class="title">President of Lamborghini Sarasota on Crafting $10 Billion Premium Brands</div>
-                    <div class="stats">
-                        <div class="stat-item-small">
-                            <div class="stat-value">$10B</div>
-                            <div class="stat-label-small">Brand Value</div>
-                        </div>
-                    </div>
+                    <h3>Victor Young</h3>
+                    <p>President, Lamborghini Sarasota</p>
                 </div>
             </div>
             <div class="result-card">
@@ -67,14 +43,8 @@
                     <iframe src="https://www.youtube.com/embed/0SwgtE1Zg4A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="card-content">
-                    <div class="category">Failing to Success Podcast</div>
-                    <div class="title">CEO of Syniti Scales to $220 Million in Data Management</div>
-                    <div class="stats">
-                        <div class="stat-item-small">
-                            <div class="stat-value">$220M</div>
-                            <div class="stat-label-small">Revenue</div>
-                        </div>
-                    </div>
+                    <h3>Kevin Campbell</h3>
+                    <p>CEO, Syniti</p>
                 </div>
             </div>
             <div class="result-card">
@@ -82,14 +52,8 @@
                     <iframe src="https://www.youtube.com/embed/xxby-6YOW2A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="card-content">
-                    <div class="category">Failing to Success Podcast</div>
-                    <div class="title">CEO of Flippa Reaches $1 Billion in Digital Asset Transactions</div>
-                    <div class="stats">
-                        <div class="stat-item-small">
-                            <div class="stat-value">$1B</div>
-                            <div class="stat-label-small">Transactions</div>
-                        </div>
-                    </div>
+                    <h3>Blake Hutchison</h3>
+                    <p>CEO, Flippa</p>
                 </div>
             </div>
         </div>
