@@ -62,7 +62,7 @@
 
 <section class="benefits-section">
     <div class="container">
-        <h2 class="section-title">Why Be a <span class="accent">Guest?</span></h2>
+        <h2 class="section-title">How It <span class="accent">Works</span></h2>
         
         <div class="benefits-grid">
             <div class="benefit-card">
