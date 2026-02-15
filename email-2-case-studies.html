@@ -81,6 +81,40 @@
             border-top: 1px solid #e5e7eb;
             font-size: 14px;
         }
+        .video-thumb {
+            position: relative;
+            display: block;
+            margin-top: 12px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .video-thumb img {
+            width: 100%;
+            display: block;
+        }
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 68px;
+            height: 48px;
+            background: rgba(0,0,0,0.8);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .play-btn::after {
+            content: "";
+            border-style: solid;
+            border-width: 10px 0 10px 18px;
+            border-color: transparent transparent transparent #fff;
+            margin-left: 4px;
+        }
+        .video-thumb:hover .play-btn {
+            background: #ff0000;
+        }
         .divider {
             height: 1px;
             background: #e5e7eb;
@@ -190,6 +224,10 @@
                     <span>→ Landed a client from YouTube</span>
                 </div>
                 <div class="quote">"We already had a client come through because they found our YouTube videos."</div>
+                <a href="https://youtu.be/Zi2FeXEP-so" class="video-thumb" target="_blank">
+                    <img src="https://img.youtube.com/vi/Zi2FeXEP-so/hqdefault.jpg" alt="Watch Mike's story">
+                    <div class="play-btn"></div>
+                </a>
             </div>
             
             <div class="case-study">
@@ -200,6 +238,10 @@
                     <span>→ 15K new followers</span>
                     <span>→ In 120 days</span>
                 </div>
+                <a href="https://youtu.be/UALDgORvhUU" class="video-thumb" target="_blank">
+                    <img src="https://img.youtube.com/vi/UALDgORvhUU/hqdefault.jpg" alt="Watch April's story">
+                    <div class="play-btn"></div>
+                </a>
             </div>
             
             <div class="case-study">
@@ -209,6 +251,10 @@
                     <span>→ 2K → 40K subscribers</span>
                     <span>→ 120 days</span>
                 </div>
+                <a href="https://youtu.be/yGCZhSzgm2I" class="video-thumb" target="_blank">
+                    <img src="https://img.youtube.com/vi/yGCZhSzgm2I/hqdefault.jpg" alt="Watch Martin's story">
+                    <div class="play-btn"></div>
+                </a>
             </div>
             
             <div class="case-study">
@@ -218,6 +264,10 @@
                     <span>→ 1K → 35K subscribers</span>
                     <span>→ 200 days</span>
                 </div>
+                <a href="https://youtu.be/c2DwfThLgM8" class="video-thumb" target="_blank">
+                    <img src="https://img.youtube.com/vi/c2DwfThLgM8/hqdefault.jpg" alt="Watch Alicia's story">
+                    <div class="play-btn"></div>
+                </a>
             </div>
             
             <div class="divider"></div>
