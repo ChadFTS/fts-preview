@@ -182,7 +182,8 @@
         .social-proof h2 {
             font-size: 2.5rem;
             margin-bottom: 50px;
-            color: #1e293b;
+            color: #1e293b !important;
+            font-weight: 800;
         }
         
         .social-proof h2 .accent {
@@ -266,10 +267,11 @@
         }
 
         .benefits-section .section-title .accent {
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #1e293b;
+            background: none;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: #1e293b;
+            background-clip: unset;
         }
 
         .benefits-section .section-subtitle {
@@ -592,7 +594,7 @@
             }
             
             .social-proof h2 {
-                color: #ffffff;
+                color: #1e293b !important;
             }
 
             .step {
