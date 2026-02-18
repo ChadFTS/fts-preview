@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blueprint Nurture — Simple Beehiiv Format</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header p { opacity: 0.9; font-size: 14px; }
+        .nav {
+            background: #0f172a;
+            padding: 16px 20px;
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #334155;
+        }
+        .nav-btn {
+            padding: 8px 14px;
+            background: #334155;
+            border: none;
+            border-radius: 8px;
+            color: #e2e8f0;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+        .nav-btn:hover { background: #475569; }
+        .nav-btn.active { background: #6366f1; color: white; }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .email { display: none; }
+        .email.active { display: block; }
+        .email-meta {
+            background: #334155;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .email-meta-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 6px;
+        }
+        .email-meta-row:last-child { margin-bottom: 0; }
+        .email-meta-label { color: #94a3b8; width: 70px; flex-shrink: 0; }
+        .email-meta-value { color: #f8fafc; }
+        
+        /* Simple email body - like a real email */
+        .email-body {
+            background: #ffffff;
+            color: #1f2937;
+            border-radius: 8px;
+            padding: 32px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        .email-body p { margin-bottom: 16px; }
+        .email-body strong, .email-body b { color: #111827; }
+        .email-body em { color: #4b5563; }
+        .email-body ul, .email-body ol { margin: 16px 0 16px 24px; }
+        .email-body li { margin-bottom: 8px; }
+        .email-body hr {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 24px 0;
+        }
+        
+        /* Single CTA button - the main action */
+        .cta-btn {
+            display: block;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white !important;
+            text-align: center;
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 24px 0;
+        }
+        
+        /* Simple highlight - use sparingly */
+        .highlight {
+            background: #fefce8;
+            border-left: 3px solid #fbbf24;
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight p { margin: 0; color: #713f12; }
+        
+        /* Simple quote */
+        .quote {
+            border-left: 3px solid #e5e7eb;
+            padding-left: 20px;
+            margin: 20px 0;
+            color: #6b7280;
+            font-style: italic;
+        }
+        .quote .author {
+            font-style: normal;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        
+        .signature {
+            color: #6b7280;
+            margin-top: 24px;
+        }
+        
+        .ps {
+            color: #6b7280;
+            font-size: 14px;
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📧 Blueprint Nurture Sequence</h1>
+        <p>Simple format for Beehiiv • 14 new emails</p>
+    </div>
+    
+    <div class="nav" id="email-nav">
+        <button class="nav-btn active" onclick="showEmail(7)">7</button>
+        <button class="nav-btn" onclick="showEmail(8)">8</button>
+        <button class="nav-btn" onclick="showEmail(9)">9</button>
+        <button class="nav-btn" onclick="showEmail(10)">10</button>
+        <button class="nav-btn" onclick="showEmail(11)">11</button>
+        <button class="nav-btn" onclick="showEmail(12)">12</button>
+        <button class="nav-btn" onclick="showEmail(13)">13</button>
+        <button class="nav-btn" onclick="showEmail(14)">14</button>
+        <button class="nav-btn" onclick="showEmail(15)">15</button>
+        <button class="nav-btn" onclick="showEmail(16)">16</button>
+        <button class="nav-btn" onclick="showEmail(17)">17</button>
+        <button class="nav-btn" onclick="showEmail(18)">18</button>
+        <button class="nav-btn" onclick="showEmail(19)">19</button>
+        <button class="nav-btn" onclick="showEmail(20)">20</button>
+    </div>
+    
+    <div class="container">
+        
+        <!-- EMAIL 7 -->
+        <div class="email active" id="email-7">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Day:</span>
+                    <span class="email-meta-value">20</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">The 1-hour CEO</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">How busy execs find time for content (hint: they don't)</span>
+                </div>
+            </div>
+            <div class="email-body">
+                <p>Most CEOs I talk to say the same thing:</p>
+                <p><em>"I know I should be creating content. I just don't have time."</em></p>
+                <p>I get it. You're running a company. You've got meetings, decisions, fires to put out. The last thing you need is another job.</p>
+                <p>Here's what changed my mind:</p>
+                <div class="highlight">
+                    <p><strong>You don't need to become a content creator. You just need to talk.</strong></p>
+                </div>
+                <p>Our top-performing clients spend exactly 1 hour per month on content. That's it.</p>
+                <p>Here's what that hour looks like:</p>
+                <ul>
+                    <li>We hop on a call</li>
+                    <li>I ask you questions about your expertise</li>
+                    <li>You talk like you're explaining things to a smart friend</li>
+                    <li>We record it</li>
+                </ul>
+                <p>That's the entire time commitment.</p>
+                <p>From that single hour, my team creates 60-120 pieces of content. We post them across 6 platforms. You show up everywhere without lifting another finger.</p>
+                <p>Jonny Ruck did exactly this. 120 days later: 1.2 million views, 17,000 followers.</p>
+                <p>If you've got 1 hour per month, you've got enough time.</p>
+                <a href="https://calendly.com/chad-fts/videxp" class="cta-btn">→ Book Your Content Plan Call</a>
+                <p class="signature">– Chad</p>
+            </div>
+        </div>
+        
+        <!-- EMAIL 8 -->
+        <div class="email" id="email-8">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Day:</span>
+                    <span class="email-meta-value">25</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">What makes a hook work</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">5 frameworks behind 70M+ views</span>
+                </div>
+            </div>
+            <div class="email-body">
+                <p>Quick lesson that took me 70 million views to learn:</p>
+                <p><strong>The first 3 seconds determine everything.</strong></p>
+                <p>Your hook is the difference between someone scrolling past or stopping to watch. Get it wrong, and it doesn't matter how good your content is.</p>
+                <p>Here's what works:</p>
+                <p><strong>1. Pattern interrupt</strong><br>
+                Start with something unexpected. "I fired my best salesperson" hits harder than "Let me tell you about sales."</p>
+                <p><strong>2. Curiosity gap</strong><br>
+                Open a loop their brain needs to close. "The mistake that cost me $2M" — they HAVE to know what it was.</p>
+                <p><strong>3. Specificity</strong><br>
+                "How I got 47 clients in 90 days" beats "How I got a lot of clients fast."</p>
+                <p><strong>4. Controversy</strong><br>
+                Challenge something everyone believes. "Cold calling is dead" gets attention because people disagree.</p>
+                <p><strong>5. Direct address</strong><br>
+                "CEOs are getting this wrong" — if they're a CEO, they're listening.</p>
+                <hr>
+                <p>We built a free tool that generates hooks using these frameworks:</p>
+                <p>→ <a href="https://hook-generator-beta.vercel.app">Try the Hook Generator</a></p>
+                <p>Plug in your topic and get 10+ hooks instantly.</p>
+                <a href="https://calendly.com/chad-fts/videxp" class="cta-btn">→ Book Your 30-Topic Content Plan</a>
+                <p class="signature">– Chad</p>
+            </div>
+        </div>
+        
+        <!-- EMAIL 9 -->
+        <div class="email" id="email-9">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Day:</span>
+                    <span class="email-meta-value">30</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">Pick your platforms wisely</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">Where your buyers actually are</span>
+                </div>
+            </div>
+            <div class="email-body">
+                <p><em>"Should I be on TikTok?"</em></p>
+                <p>I get this question a lot. Here's my honest answer:</p>
+                <p><strong>It depends on where your buyers actually are.</strong></p>
+                <p>Quick breakdown:</p>
+                <p><strong>LinkedIn</strong> — Best for B2B. Decision-makers scroll here during work hours.</p>
+                <p><strong>YouTube</strong> — The long game. Videos get discovered for years.</p>
+                <p><strong>TikTok</strong> — Fastest growth potential. Algorithm rewards new creators.</p>
+                <p><strong>Instagram</strong> — Good for personal brand. Reels can pop.</p>
+                <p><strong>X (Twitter)</strong> — Real-time conversations. Great for thought leadership.</p>
+                <p><strong>Facebook</strong> — Still massive reach, especially 35+.</p>
+                <hr>
+                <p>Here's what we do:</p>
+                <p>You pick 6 platforms. We post to all of them, optimized for each.</p>
+                <p>Same content, reformatted. One hour of your time becomes omnipresence.</p>
+                <a href="https://calendly.com/chad-fts/videxp" class="cta-btn">→ Book Your Content Plan Call</a>
+                <p class="signature">– Chad</p>
+            </div>
+        </div>
+        
+        <!-- EMAIL 10 -->
+        <div class="email" id="email-10">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Day:</span>
+                    <span class="email-meta-value">35</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">Why most CEO content fails</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">And how to make sure yours doesn't</span>
+                </div>
+            </div>
+            <div class="email-body">
+                <p>I've seen a lot of CEO content crash and burn.</p>
+                <p>Not because the CEO wasn't smart. Not because they didn't have good ideas.</p>
+                <p>Here's what actually kills it:</p>
+                <p><strong>1. Inconsistency</strong> — Post 5 times, disappear for 2 months. The algorithm forgets you.</p>
+                <p><strong>2. Trying to go viral</strong> — Chasing trends instead of building authority.</p>
+                <p><strong>3. Overthinking</strong> — Waiting for perfect while competitors with iPhones eat your lunch.</p>
+                <p><strong>4. No system</strong> — Doing everything yourself until you burn out.</p>
+                <p><strong>5. Wrong content</strong> — Talking about what YOU find interesting instead of what your audience needs.</p>
+                <hr>
+                <p>The fix:</p>
+                <ul>
+                    <li>Consistency (we post for you daily)</li>
+                    <li>Strategy over virality (we know what performs)</li>
+                    <li>A system (1 hour/month, we do the rest)</li>
+                </ul>
+                <p>If you've tried content before and it didn't work, it probably wasn't you. It was the approach.</p>
+                <a href="https://calendly.com/chad-fts/videxp" class="cta-btn">→ Let's Build You a System</a>
+                <p class="signature">– Chad</p>
+            </div>
+        </div>
+        
+        <!-- EMAIL 11 -->
+        <div class="email" id="email-11">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Day:</span>
+                    <span class="email-meta-value">40</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">"I'm not good on camera"</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">You don't need to be. Here's why.</span>
+                </div>
+            </div>
+            <div class="email-body">
+                <p>I hear this a lot:</p>
+                <p><em>"Chad, I'm just not a camera person."</em></p>
+                <p>Here's what I tell them:</p>
+                <div class="highlight">
+                    <p><strong>You don't need to be good on camera. You just need to be yourself.</strong></p>
+                </div>
+                <p>This isn't a TED talk. There's no script. No teleprompter.</p>
+                <p>I get on a Zoom call with you. I ask you questions about your business. You answer like you're talking to a colleague.</p>
+                <p>That's it. You're having a conversation. The camera just happens to be there.</p>
+                <p>The CEOs who perform best on video aren't polished media personalities. They're authentic. They stumble sometimes. They're <em>real</em>.</p>
+                <p>That's what audiences connect with.</p>
+                <p>Martin Rowinski was nervous before his first recording. 120 days later: 40,000 subscribers.</p>
+                <p>April Davis said the same thing. 120 days later: 400,000 views.</p>
+                <a href="https://calendly.com/chad-fts/videxp" class="cta-btn">→ Let's Try It</a>
+                <p class="signature">– Chad</p>
+            </div>
+        </div>
+        
+        <!-- EMAIL 12 -->
+        <div class="email" id="email-12">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Day:</span>
+                    <span class="email-meta-value">45</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">You don't need more time</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">1 hour per month. That's it.</span>
+                </div>
+            </div>
+            <div class="email-body">
+                <p>Let me guess:</p>
+                <p>Your calendar is packed. Back-to-back meetings. Fires to put out. A hundred things competing for your attention.</p>
+                <p>And somewhere on your mental to-do list: "Start creating content."</p>
+                <p>But there's never enough time.</p>
+                <p>Here's the thing:</p>
+                <p><strong>You don't need more time. You need a better system.</strong></p>
+                <p>What if content took 1 hour per month?</p>
+                <ul>
+                    <li><strong>60 minutes</strong> on a recorded call with me</li>
+                    <li><strong>0 minutes</strong> editing, writing captions, posting</li>
+                </ul>
+                <p>My team takes that single hour and turns it into 60-120 pieces of content across 6 platforms.</p>
+                <p>Jonny Ruck spent 4 hours total over 4 months. Result: 1.2 million views.</p>
+                <p>You have 1 hour per month. The question is whether you'll invest it in becoming visible.</p>
+                <a href="https://calendly.com/chad-fts/videxp" class="cta-btn">→ Let's Find Your Hour</a>
+                <p class="signature">– Chad</p>
+            </div>
+        </div>
+        
+        <!-- EMAIL 13 -->
+        <div class="email" id="email-13">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Day:</span>
+                    <span class="email-meta-value">50</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">Why it didn't work before</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">It wasn't you. It was the approach.</span>
+                </div>
+            </div>
+            <div class="email-body">
+                <p>If you've tried content before and it flopped, I need you to hear this:</p>
+                <div class="highlight">
+                    <p><strong>It wasn't you. It was the approach.</strong></p>
+                </div>
+                <p>Here's what usually happens:</p>
+                <p>Someone tells you to get on LinkedIn. You post a few times. Maybe get some traction.</p>
+                <p>Then life happens. You get busy. Miss a week, then a month.</p>
+                <p>By the time you come back, you're starting from zero again.</p>
+                <p><strong>Sound familiar?</strong></p>
+                <p>The CEOs winning at content aren't necessarily better than you. They just have a system that keeps them showing up. Every. Single. Day.</p>
+                <p>That's what we build for you.</p>
+                <a href="https://calendly.com/chad-fts/videxp" class="cta-btn">→ Let's Make This Time Different</a>
+                <p class="signature">– Chad</p>
+            </div>
+        </div>
+        
+        <!-- EMAIL 14 -->
+        <div class="email" id="email-14">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Day:</span>
+                    <span class="email-meta-value">55</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">The cost of staying invisible</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">What's one client worth to you?</span>
+                </div>
+            </div>
+            <div class="email-body">
+                <p>Quick thought experiment:</p>
+                <p>What's one client worth to you? $10K? $50K? $500K?</p>
+                <p>Now ask yourself:</p>
+                <p><strong>How many deals have you lost to competitors who showed up first?</strong></p>
+                <p>Not because they were better. But because when the prospect was researching, your competitor's face kept appearing. In their feed. In search results. In their inbox.</p>
+                <p>Familiarity builds trust. Trust wins deals.</p>
+                <p>Mike Singletary started posting consistently. A client found him through YouTube and closed.</p>
+                <p>That's what happens when you show up where your buyers are looking.</p>
+                <p>The question isn't "Can I afford to do this?"</p>
+                <p>It's <strong>"Can I afford NOT to?"</strong></p>
+                <a href="https://calendly.com/chad-fts/videxp" class="cta-btn">→ Let's Talk Numbers</a>
+                <p class="signature">– Chad</p>
+            </div>
+        </div>
+        
+        <!-- EMAIL 15 -->
+        <div class="email" id="email-15">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Day:</span>
+                    <span class="email-meta-value">60</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">1.2 million views in 120 days</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">How Jonny went from zero to everywhere</span>
+                </div>
+            </div>
+            <div class="email-body">
+                <p>Let me tell you about Jonny.</p>
+                <p>Jonny Ruck runs Intelliactions — an AI automation company.</p>
+                <p>Smart guy. Great product. Zero online presence.</p>
+                <p><strong>120 days later:</strong></p>
+                <ul>
+                    <li>1.2 million views</li>
+                    <li>17,000 followers</li>
+                    <li>Inbound leads he never had before</li>
+                </ul>
+                <p>Here's what changed:</p>
+                <p><strong>Month 1:</strong> First 60-minute session. Just talked about AI and automation.</p>
+                <p><strong>Month 2:</strong> Content started compounding. Videos getting shared.</p>
+                <p><strong>Month 3:</strong> Algorithm figured out who needed to see him. Views exploded.</p>
+                <p><strong>Month 4:</strong> 1.2M views. Prospects reaching out. Speaking invitations.</p>
+                <p><strong>What Jonny did:</strong> Showed up for 4 hours total.</p>
+                <p><strong>What we did:</strong> 400+ pieces of content across 6 platforms.</p>
+                <p>Your expertise is already there. We just need to get it in front of people.</p>
+                <a href="https://calendly.com/chad-fts/videxp" class="cta-btn">→ You Could Be 120 Days Away</a>
+                <p class="signature">– Chad</p>
+            </div>
+        </div>
+        
+        <!-- EMAIL 16 -->
+        <div class="email" id="email-16">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Day:</span>
+                    <span class="email-meta-value">65</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">What 6 CEOs told me this month</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">Real quotes from real clients</span>
+                </div>
+            </div>
+            <div class="email-body">
+                <p>I asked our clients one question:</p>
+                <p><strong>"What changed after you started showing up consistently?"</strong></p>
+                <p>Here's what they said:</p>
+                
+                <div class="quote">
+                    "We already had a client come through our website because they found our YouTube videos."
+                    <div class="author">— Mike Singletary, Zindo</div>
+                </div>
+                
+                <div class="quote">
+                    "FTS has been a lifesaver in streamlining my content creation."
+                    <div class="author">— Martin Rowinski, Boardsi</div>
+                </div>
+                
+                <div class="quote">
+                    "In just 120 days, we gained 400,000 views and 15,000 followers."
+                    <div class="author">— April Davis, LUMA Matchmaking</div>
+                </div>
+                
+                <div class="quote">
+                    "35,000 YouTube subscribers. The content just keeps working for us."
+                    <div class="author">— Alicia Katz Pollock, Royalwise</div>
+                </div>
+                
+                <div class="quote">
+                    "1.2 million views. I never thought I'd be saying that."
+                    <div class="author">— Jonny Ruck, Intelliactions</div>
+                </div>
+                
+                <p>These aren't influencers. They're CEOs running real businesses.</p>
+                <p>They just decided to stop being invisible.</p>
+                <a href="https://calendly.com/chad-fts/videxp" class="cta-btn">→ Your Turn?</a>
+                <p class="signature">– Chad</p>
+            </div>
+        </div>
+        
+        <!-- EMAIL 17 -->
+        <div class="email" id="email-17">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Day:</span>
+                    <span class="email-meta-value">70</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">From zero to 17,000 followers</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">The before/after that still surprises me</span>
+                </div>
+            </div>
+            <div class="email-body">
+                <p>Here's a before/after that still surprises me:</p>
+                <p><strong>Day 1:</strong><br>
+                LinkedIn followers: ~500<br>
+                YouTube subscribers: 0<br>
+                Inbound leads from content: 0</p>
+                <p><strong>Day 120:</strong><br>
+                LinkedIn followers: 17,000+<br>
+                Monthly views: 300,000+<br>
+                Inbound leads: weekly</p>
+                <p>Same person. Same expertise. Same business.</p>
+                <p>The only difference: a system that kept them visible every single day.</p>
+                <hr>
+                <p>Here's the thing about content:</p>
+                <p><strong>Day 1-30:</strong> Feels like nothing is happening.</p>
+                <p><strong>Day 31-60:</strong> Small wins. Algorithm is learning.</p>
+                <p><strong>Day 61-90:</strong> Momentum builds. Old content gets discovered.</p>
+                <p><strong>Day 91-120:</strong> Compounding kicks in. Opportunities appear.</p>
+                <p>Most people quit in the first 30 days. The winners keep going.</p>
+                <a href="https://calendly.com/chad-fts/videxp" class="cta-btn">→ Let's Get You to Day 120</a>
+                <p class="signature">– Chad</p>
+            </div>
+        </div>
+        
+        <!-- EMAIL 18 -->
+        <div class="email" id="email-18">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Day:</span>
+                    <span class="email-meta-value">75</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">Your competitors are doing this</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">The gap is widening</span>
+                </div>
+            </div>
+            <div class="email-body">
+                <p>Quick reality check:</p>
+                <p>Go to LinkedIn. Search for leaders in your industry.</p>
+                <p>How many are posting regularly? How many have thousands of followers?</p>
+                <p><strong>That used to be a competitive advantage. Now it's table stakes.</strong></p>
+                <p>The CEOs who will win the next decade aren't just building great products. They're building audiences.</p>
+                <p>When a prospect researches solutions, they're going to find SOMEONE.</p>
+                <p>Will it be you? Or your competitor?</p>
+                <p>The good news: it's not too late. Most of your competitors are still figuring this out.</p>
+                <p>But the window is closing.</p>
+                <a href="https://calendly.com/chad-fts/videxp" class="cta-btn">→ Don't Play Catch-Up</a>
+                <p class="signature">– Chad</p>
+            </div>
+        </div>
+        
+        <!-- EMAIL 19 -->
+        <div class="email" id="email-19">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Day:</span>
+                    <span class="email-meta-value">80</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">What's working right now</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">Q1 2026 trends we're seeing</span>
+                </div>
+            </div>
+            <div class="email-body">
+                <p>Quick update on what's working right now:</p>
+                <p><strong>1. "Story + lesson" format</strong><br>
+                "I made a $500K mistake..." then teach the lesson. Vulnerability + value = views.</p>
+                <p><strong>2. LinkedIn video is exploding</strong><br>
+                3-5x the reach vs. text posts. If you're not posting video on LinkedIn, you're leaving views on the table.</p>
+                <p><strong>3. Shorts under 45 seconds</strong><br>
+                30-45 second clips getting the best retention.</p>
+                <p><strong>4. Specific numbers in hooks</strong><br>
+                "$2M mistake" beats "big mistake."</p>
+                <p><strong>5. Consistency still wins</strong><br>
+                The accounts winning are posting EVERY day.</p>
+                <hr>
+                <p>This is what we optimize for constantly. The landscape shifts, and we shift with it.</p>
+                <p>Your job: show up for one hour.</p>
+                <p>Our job: make sure that hour turns into content that works.</p>
+                <a href="https://calendly.com/chad-fts/videxp" class="cta-btn">→ Let's Get You Current</a>
+                <p class="signature">– Chad</p>
+            </div>
+        </div>
+        
+        <!-- EMAIL 20 -->
+        <div class="email" id="email-20">
+            <div class="email-meta">
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Day:</span>
+                    <span class="email-meta-value">90</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Subject:</span>
+                    <span class="email-meta-value">Quick note from Chad</span>
+                </div>
+                <div class="email-meta-row">
+                    <span class="email-meta-label">Preview:</span>
+                    <span class="email-meta-value">What's holding you back?</span>
+                </div>
+            </div>
+            <div class="email-body">
+                <p>Hey —</p>
+                <p>It's been about 3 months since you downloaded the Viral Video Blueprint.</p>
+                <p>I've sent you case studies. Strategies. Frameworks. Social proof.</p>
+                <p>Now I just want to ask directly:</p>
+                <p><strong>What's holding you back?</strong></p>
+                <p>Is it time? We've solved that. 1 hour per month.</p>
+                <p>Is it camera fear? Our clients felt the same way. Now they have millions of views.</p>
+                <p>Is it cost? Think about what one client is worth.</p>
+                <p>Or maybe you're just not ready yet. That's okay too.</p>
+                <p>But if there's a part of you that knows you should be more visible...</p>
+                <p>If you've watched competitors build audiences while you stayed on the sidelines...</p>
+                <p><strong>Let's talk.</strong></p>
+                <a href="https://calendly.com/chad-fts/videxp" class="cta-btn">→ Book Your Content Plan Call</a>
+                <p>30 minutes. I'll map out your 30-topic content plan. No pressure.</p>
+                <p class="signature">– Chad</p>
+                <p class="ps">P.S. — Jonny was on the fence for weeks before he booked. 120 days after starting: 1.2 million views. Sometimes the only thing between you and results is one decision.</p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script>
+        function showEmail(num) {
+            document.querySelectorAll('.email').forEach(e => e.classList.remove('active'));
+            document.getElementById('email-' + num).classList.add('active');
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent == num);
+            });
+        }
+    </script>
+</body>
+</html>
